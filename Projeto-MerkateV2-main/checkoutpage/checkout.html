@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalização da compra</title>
+    <link rel="stylesheet" href="./checkout.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><a href="#">Merkate</a></div>
+            <div class="menu-navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pedidos</a></li>
+                    <li><a href="#">monitorando</a></li>
+                </ul>
+            </div>
+
+            <div class="login-account">
+                <i class="ri-user-fill"></i>
+                <h1>Login</h1>
+            </div>
+        </nav>
+
+        <div class="navbar">
+            <div class="check">
+                <i class="ri-check-line"></i>
+                <span>Produtos</span>
+            </div>
+            <div class="check2">
+                <p>2</p>
+                <span>Pagamento</span>
+            </div>
+            <div class="check3">
+                <p>3</p>
+                <span>Confirmação</span>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="messagemCorrect">
+        <span><i class="ri-check-line"></i>Informações preeenchida com Sucesso</span>
+    </div>
+
+    <div class="messagemIncorrect">
+        <span><i class="ri-close-fill"></i>Preencha os campos vazios</span>
+    </div>
+    <main class="container">
+        <section class="forms-section">
+            <div class="user-informacion">
+                <div class="form-item">
+                    <label for="name">Nome Completo:</label>
+                    <input id="username" type="text" name="username">
+                </div>
+                <div class="form-item">
+                    <label for="numero">Telefone:</label>
+                    <input id="numberPhone" type="number" name="numero" placeholder="EX: 44 00000-0000">
+                </div>
+                <div class="form-item">
+                    <label for="endereco">Endereço:</label>
+                    <input id="Address" type="text" name="endereco">
+                </div>
+                <div class="form-item">
+                    <label for="numeroendereco">N de endereço:</label>
+                    <input id="AddressNumber" type="number" name="numeroendereco">
+                </div>
+            </div>
+            <hr>
+            <div class="forms-pagment">
+                <div class="choise-forms">
+                    <button>Pagamento com Cartão</button>
+                </div>
+                    <div class="card">
+                        <div class="card-item">
+                            <label for="card">Nome do cartão:</label>
+                            <input id="CardName" type="text">
+                        </div>
+
+                        <div class="numberCard">
+                            <div class="card-number">
+                                <label for="numbercard">Numero do cartão:</label>
+                                <input id="CardNumber" type="number" placeholder="Ex: 0000-0000-0000-0000">
+                            </div>
+
+                            <div class="card-image">
+                                <img src="../img/icones/imagens/cartoespagamento/visa.png" alt="">
+                                <img src="../img/icones/imagens/cartoespagamento/paypal.png" alt="">
+                                <img src="../img/icones/imagens/cartoespagamento/mastercard.png" alt="">
+                                <img src="../img/icones/imagens/cartoespagamento/bitcoin.png" alt="">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="saveinformaccio">
+                            <input type="checkbox">
+                            <span>Salvar informações do cartão</span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="summary-section">
+            <h1>Total da Compra</h1>
+            <p>O total consiste em uma taxa que é aplicada para a entrega</p>
+            <hr>
+            <div class="informaccionPagment">
+                <div class="subtotal">
+                    <p>SubTotal:</p>
+                    <span id="SubTotal"></span>
+                </div>
+                <div class="taxaCompra">
+                    <p>Taxa de entrega:</p>
+                    <span id="TaxaCompra"></span>
+                </div>
+                <div class="totalCompra">
+                    <p>Total:</p>
+                    <span id="TotalCompra"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="card-info">
+                <div class="img-info">
+                    <img src="../img/icones/imagens/caixasPagamento/caixaCard.png" alt="">
+                </div>
+                <div class="text-info">
+                    <span>Embalamos sua mercadoria</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta debitis aliquam commodi ipsam?
+                        Eius
+                        natus facere iste dolore tempore placeat hic atque veniam id qui omnis, temporibus consequatur
+                        iusto
+                        magnam?</p>
+                </div>
+            </div>
+            <div class="card-info">
+                <div class="img-info">
+                    <img src="../img/icones/imagens/caixasPagamento/caixaCard2.png" alt="">
+                </div>
+                <div class="text-info">
+                    <span>Lacramos para que seja transportado com segurança</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta debitis aliquam commodi ipsam?
+                        Eius
+                        natus facere iste dolore tempore placeat hic atque veniam id qui omnis, temporibus consequatur
+                        iusto
+                        magnam?</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="next">
+    <button onclick="PagmentProduct()" >Proxima etapa<i class="ri-arrow-right-s-line"></i></button>
+    </div>
+
+    <script src="./checkout.js"></script>
+    <script src="../js/dados.js"></script>
+    <script src="../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+
+</html>

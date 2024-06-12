@@ -1,0 +1,1248 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffff;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    /* Define a largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0765f3;
+    /* Define a cor do polegar da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: #666;
+    /* Define a cor da trilha da barra de rolagem */
+    border-radius: 3px;
+    /* Diminui o tamanho da borda arredondada */
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 35px;
+}
+
+.navbar .icone-text {
+    display: flex;
+    align-items: center;
+    padding-left: 38px;
+    flex-wrap: wrap;
+}
+
+.navbar .icone-text p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 13px;
+    color: rgba(34, 34, 34, 0.534);
+}
+
+.navbar .icone-text i {
+    padding: 4px;
+}
+
+.navbar .icone-text .ri-phone-fill {
+    padding-left: 15px;
+}
+
+.navbar .icones-social {
+    display: flex;
+    margin-left: auto;
+    gap: 8px;
+    padding: 7px;
+    margin-right: 20px;
+}
+
+.navbar .icones-social a {
+    text-decoration: none;
+    color: #222;
+}
+
+.navbar .login-account {
+    padding-right: 38px;
+    font-size: 18px;
+}
+
+.navbar .login-account:after {
+    content: "";
+    position: relative;
+    top: 0;
+    right: 75px;
+    border: 1px solid rgba(43, 43, 43, 0.2);
+}
+
+.navbar .login-account a {
+    color: #222;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.navbar .login-account a:hover {
+    color: #1b3bf1;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    padding-left: 45px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    color: #222;
+}
+
+.menu-search {
+    display: flex;
+}
+
+.menu-search select {
+    padding: 7.8px;
+    outline: none;
+    border-radius: 8px 0px 0px 8px;
+    border: 1px solid rgba(43, 43, 43, 0.2);
+}
+
+.menu-search input {
+    padding: 8.8px;
+    outline: none;
+    border: 1px solid rgba(43, 43, 43, 0.2);
+}
+
+.menu-search i {
+    background: #1b3bf1;
+    padding: 8px;
+    border-radius: 0px 8px 8px 0px;
+    color: #fff;
+}
+
+.icone-navbar {
+    padding-right: 40px;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.icone-navbar i {
+    font-size: 25px;
+}
+
+.icone-navbar .ri-menu-3-line {
+    display: none;
+}
+
+
+.icone-navbar .ri-heart-line:active {
+    color: #ff0000;
+}
+
+
+.cart-container {
+    display: flex;
+    position: relative;
+}
+
+#qtdCart {
+    position: absolute;
+    right: 35px;
+    top: -48px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f8a835;
+    font-size: 15px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qtdCart.mostrar {
+    display: flex;
+}
+
+.menu-navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu-navbar li a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+/* section banner */
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+}
+
+.container .banner-element {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container .banner-element .img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.container .banner-element .img img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.container .banner-element .img:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(34, 29, 29, 0), rgb(19, 17, 17));
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+.container .banner-element .text-banner {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    gap: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container .banner-element .text-banner p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.container .banner-element .text-banner button {
+    background: #0765f3;
+    color: #fff;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    width: 50%;
+}
+
+.card-service {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    max-width: 100%;
+    width: 100%;
+}
+
+.card-service .card-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 10px;
+    border-radius: 8px;
+    gap: 1rem;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #fff; /* Garantir que o fundo do card seja branco */
+    z-index: 1; /* Elevar o conteúdo do card acima dos pseudo-elementos */
+    overflow: hidden; /* Adicione isso */
+}
+
+.card-service .card-container::before, .card-service .card-container::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    pointer-events: none; /* Impede que os pseudo-elementos capturem eventos do mouse */
+    box-sizing: border-box;
+    animation: draw 10s infinite linear;
+}
+
+.card-service .card-container::before {
+    right: 0;
+    bottom: 0;
+    border-width: 0 0 0 5px;
+    border-color: transparent transparent transparent #f8a835;
+    animation-delay: 5s;
+}
+
+.card-service .card-container::after {
+    left: 0;
+    top: 0;
+    border-width: 5px 0 0 0;
+    border-color: #f8a835 transparent transparent transparent;
+    animation-delay: 0s;
+}
+
+@keyframes draw {
+    0% {
+        width: 0;
+    }
+    25% {
+        width: 0%;
+        height: 100%;
+    }
+    50% {
+        width: 0;
+        height: 0;
+    }
+    75% {
+        width: 100%;
+    }
+}
+
+.card-service .card-container .img-service {
+    position: relative;
+}
+
+
+
+.card-service .card-container:hover .img-service span{
+    background: #f8a835;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.card-service .card-container:hover .img-service span::after{
+    border: 5px dotted #fff;
+    padding: 5px;
+}
+
+.card-service .card-container .img-service span {
+    color: #adb5bd;
+    font-size: 48px;
+    padding: 20px;
+}
+
+.card-service .card-container .img-service span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px dotted #f8a835;
+    border-radius: 50%;
+    pointer-events: none;
+    box-sizing: border-box;
+    animation: rotate 20s infinite linear;
+}
+
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.card-service .card-container .text-service h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card-service .card-container .text-service p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 18px;
+}
+
+
+/* seção produtos */
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    margin-top: 85px;
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 38px;
+}
+
+.produtos .contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.produtos .text-section {
+    font-size: clamp(1.1rem, 0.5vw + 1rem, 2rem);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+hr {
+    width: 100%;
+}
+
+.produtos .menu-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.produtos .menu-section button {
+    margin: 10px;
+    background: transparent;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: clamp(1.1rem, 0.4vw + 1rem, 2rem);
+    color: rgba(34, 34, 34, 0.5);
+    transition: all .5s linear;
+    border: none;
+    cursor: pointer;
+}
+
+.produtos .menu-section button:hover {
+    color: #d11306;
+}
+
+.produtos .menu-section button::after {
+    content: "";
+    position: relative;
+    left: 0;
+    bottom: -5px;
+    display: flex;
+    transform: rotate(180deg);
+    width: 0%;
+    height: 5px;
+    background: #f8a835;
+    transition: all .5s linear;
+}
+
+.produtos .menu-section button:hover::after {
+    width: 100%;
+}
+
+#produtos-alimentos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    transition: all .8s linear;
+}
+
+.produtos-alimentos #card-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.produtos-alimentos #card-produtos .card-element {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 18px;
+    cursor: pointer;
+}
+
+.produtos-alimentos #card-produtos .card-element .img-product {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.produtos-alimentos #card-produtos .card-element .img-product img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.produtos-alimentos #card-produtos .card-element .price-element {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.produtos-alimentos #card-produtos .card-element .price-element p {
+    color: #222;
+}
+
+.produtos-alimentos #card-produtos .card-element .price-element:nth-of-type(2) {
+    color: #d11306;
+}
+
+.produtos-alimentos #card-produtos .card-element .description-element {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
+.produtos-alimentos #card-produtos .card-element .button-element button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0px;
+    border-radius: 5px;
+    border: none;
+    background: #f8a835;
+    color: #fff;
+    font-family: "Radio Canada Big", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: clamp(1.0rem, 0.01vw + 0.1rem, 1rem);
+    cursor: pointer;
+}
+
+.produtos-alimentos #card-produtos .card-element .button-element::after {
+    content: "";
+    left: 0;
+    bottom: 36px;
+    position: relative;
+    display: flex;
+    background: #222;
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    transition: all .3s linear;
+}
+
+.produtos-alimentos #card-produtos .card-element .button-element::before {
+    content: "";
+    left: 0;
+    top: 36px;
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    background: #222;
+    width: 0%;
+    transform: rotate(360deg);
+    height: 100%;
+    border-radius: 5px;
+    transition: all .3s linear;
+}
+
+.produtos-alimentos #card-produtos .card-element .button-element:hover::before {
+    width: 55%;
+}
+
+.produtos-alimentos #card-produtos .card-element .button-element:hover::after {
+    width: 50%;
+}
+
+.produtos-alimentos #card-produtos .card-element .button-element a {
+    z-index: 8;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+.menu-carrinho {
+    position: fixed;
+    top: 0;
+    right: -480px;
+    width: 450px;
+    height: 100vh;
+    background: #e1ffd7;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: all .4s linear;
+}
+
+.menu-carrinho .ri-close-line {
+    position: relative;
+    left: 340px;
+    top: 0px;
+    font-size: 40px;
+    color: #000;
+    cursor: pointer;
+}
+
+.menu-carrinho .card-carrinho {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-inline: 12px;
+}
+
+.menu-carrinho .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu-carrinho .text-carrinho {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+    width: 100%;
+    color: #222;
+}
+
+.menu-carrinho .text-carrinho button {
+    background: transparent;
+    color: #222;
+    border: none;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    border: none;
+}
+
+input {
+    border: none;
+}
+
+input[type="number"] {
+    appearance: none;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    color: #222;
+    border: none;
+    outline: none;
+}
+
+.menu-carrinho .add-cep {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.menu-carrinho .calc {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.menu-carrinho .calc button {
+    width: 100%;
+    padding: 7px 0px;
+    border-radius: 7px;
+    background: #f8a835;
+    outline: none;
+    border: none;
+    color: #222;
+    font-family: "Radio Canada Big", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: clamp(1.0rem, 0.01vw + 0.1rem, 1rem);
+    cursor: pointer;
+}
+
+.menu-carrinho .add-cep i {
+    font-size: 38px;
+    color: rgba(51, 51, 51, 0.8);
+}
+
+.messagem {
+    display: none;
+}
+
+.messagem p {
+    display: flex;
+    width: 100%;
+    background: #666;
+    border-radius: 8px;
+    color: #dff1ff;
+    font-family: "Radio Canada Big", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: clamp(1.0rem, 0.01vw + 0.1rem, 1rem);
+    padding: 5px 5px;
+    margin-bottom: 15px;
+    transition: all .8s linear;
+}
+
+.messagemError {
+    display: none;
+    width: 100%;
+    background: #d11306;
+    border-radius: 8px;
+    color: #dff1ff;
+    font-family: "Radio Canada Big", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: clamp(1.0rem, 0.01vw + 0.1rem, 1rem);
+    padding: 5px 5px;
+    margin-bottom: 15px;
+    transition: all .8s linear;
+}
+
+.menu-carrinho .cards-element-product {
+    display: flex;
+    margin-top: 38px;
+    height: 100%;
+    gap: 15px;
+}
+
+.menu-carrinho .cards-element-product .img-element {
+    display: flex;
+    height: 100%;
+}
+
+.menu-carrinho .cards-element-product .img-element img {
+    position: relative;
+    width: 125px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu-carrinho .text-element {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    color: #222;
+    font-family: "Radio Canada Big", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: clamp(1rem, 0.01vw + 0.1rem, 1rem);
+    white-space: wrap;
+    gap: 18px;
+}
+
+.menu-carrinho .card-carrinho .total {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 114px;
+}
+
+.menu-carrinho .card-carrinho .total button {
+    padding: 10px 30px;
+    background: #222;
+    color: #fff;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-carrinho .card-carrinho .total button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-carrinho .card-carrinho .total p {
+    font-size: 20px;
+    z-index: 888;
+}
+
+
+li {
+    list-style: none;
+}
+
+.menu-carrinho {
+    margin-bottom: 85px;
+}
+
+
+.cards-element-product {
+    align-items: center;
+    width: 100%;
+}
+
+.img-element {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-element::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+}
+
+.img-element img {
+    position: relative;
+    z-index: 2;
+    mix-blend-mode: multiply;
+}
+
+
+.text-element {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+.card .cards-element-product .removerProduto {
+    width: 100%;
+}
+
+.removerProduto .removerBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.removerProduto .removerBtn:hover {
+    background-color: #cc0000;
+}
+
+/* produto banner */
+
+.Banner-temp .banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    /* Define a altura do banner */
+}
+
+.Banner-temp .banner .banner-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Banner-temp .banner .banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.Banner-temp .banner .banner-img::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(34, 29, 29, 0.5), rgb(19, 17, 17));
+    border-radius: 10px 10px 10px 10px;
+    z-index: 1;
+}
+
+.Banner-temp .banner .banner-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    padding: 20px;
+    font-family: "Radio Canada Big", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.Banner-temp .banner-text .text-banner h1 {
+    font-size: clamp(2rem, 1.0774rem + 3.7936vw, 0.5rem);
+    max-width: 500px;
+    margin-bottom: 15px;
+}
+
+.Banner-temp .banner-text .sub-text p {
+    max-width: 500px;
+
+    margin-bottom: 15px;
+}
+
+
+.Banner-temp .banner-text .wrapper-card {
+    display: flex;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.Banner-temp .banner-text .wrapper-card .card-date {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Banner-temp .banner-text .wrapper-card .card-date h1 {
+    padding: 8px 15px;
+    background: #cc0000;
+    border-radius: 8px;
+}
+
+.Banner-temp .banner-text .wrapper-card .card-date p {
+    font-size: 18px;
+}
+
+.Banner-temp .banner-text .button-buy button {
+    padding: 15px;
+    background: #d11306;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    width: 100%;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.text-footer h1 {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 28px;
+    color: #222;
+}
+
+.menu-footer ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-footer li a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.icones-footer a {
+    text-decoration: none;
+    gap: 1rem;
+    border: 1px solid #0765f3;
+    padding: 9px;
+    border-radius: 50%;
+}
+
+.icones-footer i {
+    color: #222;
+    font-size: 20px;
+}
+
+.dark-mode {
+    background: #181819;
+    color: #fff;
+}
+
+.dark-mode .icones-social i {
+    color: #fff;
+}
+
+.dark-mode .login-account a {
+    color: #fff;
+}
+
+.dark-mode .navbar .icone-text p {
+    color: #fff;
+}
+
+.dark-mode .logo a {
+    color: #cc0000;
+}
+
+.dark-mode .menu-navbar li a {
+    color: #f8a835;
+}
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 4.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    border: 1px solid #adb5bd;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.20em;
+    bottom: 0.25em;
+    background-color: #2b2c2e;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--color-cookies);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #007bff;
+}
+
+input:checked+.slider:before {
+    transform: translateX(2.5em);
+    /* Ajuste a distância de deslocamento conforme necessário */
+    background-color: #fff;
+}
+
+
+
+@media screen and (max-width: 57.813rem) {
+    .menu-navbar ul {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 43.75rem) {
+    .menu-search input {
+        display: none;
+    }
+
+    .menu-navbar ul {
+        display: none;
+    }
+
+    .Banner-temp .card-text {
+        position: relative;
+        top: -550px;
+    }
+}
+
+@media screen and (max-width: 38.25rem) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .navbar .icones-social {
+        display: none;
+    }
+
+    .navbar .icone-text {
+        margin-top: 35px;
+        margin-bottom: 14px;
+    }
+
+    .navbar .login-account {
+        display: none;
+    }
+
+    nav {
+        margin-top: 28px;
+    }
+}
+
+@media screen and (max-width: 32.875rem) {
+    .menu-search select {
+        display: none;
+    }
+
+    .menu-search i {
+        display: none;
+    }
+
+    .icone-navbar .ri-menu-3-line {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .card-fruits .card {
+        flex-direction: column;
+    }
+
+    .img-card {
+        width: 30vw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-card img {
+        object-fit: cover;
+    }
+
+    .text-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .menu-mobile {
+        position: fixed;
+        top: 0;
+        left: 800px;
+        display: flex;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(15px);
+        text-align: center;
+        transition: all .8s linear;
+    }
+
+
+    .menu-mobile ul {
+        list-style: none;
+    }
+
+    .menu-mobile li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: clamp(2rem, 2vw + 0.1rem, 1rem);
+        font-family: "Radio Canada Big", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    .menu-mobile .ri-close-line {
+        position: relative;
+        bottom: 290px;
+        left: 200px;
+        font-size: 35px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+}
