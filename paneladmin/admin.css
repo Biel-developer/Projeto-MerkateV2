@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #ffff;
+}
+
+::-webkit-scrollbar {
+    width: 4px; /* Define a largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-button {
+    display: none; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0765f3; /* Define a cor do polegar da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: #666; /* Define a cor da trilha da barra de rolagem */
+    border-radius: 3px; /* Diminui o tamanho da borda arredondada */
+}
+
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .wrapper-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #4c6fff;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.container .wrapper-container .text-container h1{
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 27px;
+}
+
+.container .wrapper-container .banner-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 145px;
+    padding: 45px;
+    gap: 10px;
+}
+
+.container .wrapper-container .banner-container h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 45px;
+    color: #fff;
+}
+
+.container .wrapper-container .banner-container span{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    color: rgba(255,255,255, 0.8);
+}
+
+.container .wrapper-container .logo-container{
+    margin-top: auto;
+}
+
+.container .wrapper-container .logo-container span{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    color: rgba(255,255,255, 0.8);
+}
+
+.container .wrapper-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    gap: 25px;
+    align-items: center;
+    margin-top: -180px;
+}
+
+.container .wrapper-login .forms-login form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container .wrapper-login .text-login h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.container .wrapper-login .text-login p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.container .wrapper-login .forms-login form input{
+    padding: 8px 5px;
+    width: 250px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 2px solid rgba(100, 100, 111, 0.1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    outline: none;
+}
+
+.container .wrapper-login .forms-login form label{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.container .wrapper-login .forms-login form button{
+    background: #4c6fff;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    border: none;
+    padding: 5px 0px;
+    border-radius: 8px;
+    transition: all .5s linear;
+}
+
+.container .wrapper-login .forms-login form button:hover{
+    background: transparent;
+    border: 1px solid #4c6fff;
+    color: #4c6fff;
+    cursor: pointer;
+}
+
+.container .wrapper-login .forms-login form a{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.container .wrapper-login .forms-login form a:hover{
+    color: #ff0000;
+}
+
+.messagemCorrect{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 2;
+    top: -45px;
+    transition: all .5s linear;
+}
+
+.messagemCorrect span{
+    padding: 8px;
+    background: #07c553;
+    border-radius: 8px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.messagemIncorrect{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 2;
+    top: -45px;
+    transition: all .5s linear;
+}
+
+.messagemIncorrect span{
+    padding: 8px;
+    background: #ff0000;
+    border-radius: 8px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.messagemCorrect span i{
+    padding: 0px 8px;
+    font-size: 19px;
+}
+
+.messagemIncorrect span i{
+    padding: 0px 8px;
+    font-size: 19px;
+}
+
+@media screen and (max-width: 600px){
+    .container .wrapper-container{
+       display: none;
+    }
+}

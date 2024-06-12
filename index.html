@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="icone-text">
+                <i class="ri-mail-fill"></i>
+                <p>mercadinho@gmail.com</p>
+                <i class="ri-phone-fill"></i>
+                <p>(44) 99905-8794</p>
+            </div>
+
+            <!-- mudar tema do site / se quiser só ativar -->
+            <!-- <div class="navConfig"> 
+                <div class="text-element">
+                    <p>Tema escuro/claro:</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider">
+                        <span class="material-symbols-outlined">
+                            light_mode
+                        </span>
+                        <span class="material-symbols-outlined">
+                            nightlight
+                        </span>
+                    </span>
+                </label>
+            </div> -->
+
+            <div class="icones-social">
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+                <a href="#"><i class="ri-linkedin-fill"></i></a>
+                <a href="#"><i class="ri-whatsapp-fill"></i></a>
+            </div>
+
+            <div class="login-account">
+                <i class="ri-user-fill"></i>
+                <a href="./paneladmin/login.html">Login</a>
+            </div>
+        </div>
+
+        <nav>
+            <div class="logo"><a href="#">Merkate</a></div>
+            <div class="menu-search">
+                <select id="categorias" name="categorias">
+                    <option value="category">Categorias</option>
+                    <option value="frutas">Frutas</option>
+                    <option value="vegetais">Vegetais</option>
+                    <option value="laticinios">Laticínios</option>
+                    <option value="carnes">Carnes</option>
+                    <option value="bebidas">Bebidas</option>
+                    <option value="padaria">Padaria</option>
+                    <option value="congelados">Congelados</option>
+                    <option value="limpeza">Produtos de Limpeza</option>
+                    <option value="higiene">Higiene Pessoal</option>
+                    <option value="mercearia">Mercearia</option>
+                    <input type="search" placeholder="O que deseja?">
+                    <i class="ri-search-line"></i>
+                </select>
+            </div>
+            <div class="menu-navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Pages</a></li>
+                </ul>
+            </div>
+
+            <div class="icone-navbar">
+                <i class="ri-menu-3-line"></i>
+                <i class="ri-heart-line"></i>
+                <i class="ri-shopping-bag-4-fill"></i>
+            </div>
+        </nav>
+        <div class="cart-container">
+            <div class="qtdCarrinho" id="qtdCart">0</div>
+        </div>
+    </header>
+
+    <div class="menu-mobile">
+        <i class="ri-close-line"></i>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Pages</a></li>
+        </ul>
+    </div>
+
+    <section class="home" id="home">
+        <div class="container">
+            <div class="banner-element">
+                <div class="img">
+                    <img src="./img/brooke-lark-nTZOILVZuOg-unsplash.jpg" alt="">
+                </div>
+
+                <div class="text-banner">
+                    <h1>Spice 100% Organico</h1>
+                    <p>Experimente a Perfeição da Natureza com Nossas Frutas 100% Orgânicas: Sabor Inigualável, Nutrição
+                        Superior e Sustentabilidade Ambiental em Cada Mordida Saudável!</p>
+                    <button>Compre Agora</button>
+                </div>
+            </div>
+            <div class="card-service">
+                <div class="card-container">
+                    <div class="img-service">
+                        <span class="material-symbols-outlined">
+                            local_shipping
+                            </span>
+                    </div>
+
+                    <div class="text-service">
+                        <h1>Entrega de Mercadoria</h1>
+                        <p>Frete em todo estado</p>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="img-service">
+                        <span class="material-symbols-outlined">
+                            currency_exchange
+                            </span>
+                    </div>
+
+                    <div class="text-service">
+                        <h1>Devoluções de dinheiro</h1>
+                        <p>Dentro de 30 dias</p>
+                    </div>
+                </div>
+
+                <div class="card-container">
+                    <div class="img-service">
+                        <span class="material-symbols-outlined">
+                            payments
+                            </span>
+                    </div>
+
+                    <div class="text-service">
+                        <h1>Support 24/7</h1>
+                        <p>Contate-nos 24 horas por dia</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="produtos" id="produtos">
+        <div class="contain">
+            <div class="text-section">
+                <h1>Produtos em Destaque</h1>
+            </div>
+            <div class="menu-section">
+                <button onclick="mostrarProdutos('Frutas')">Frutas</button>
+                <button onclick="mostrarProdutos('Carne Fresca')">Carne Fresca</button>
+                <button onclick="mostrarProdutos('Verduras')">Verduras</button>
+                <button onclick="mostrarProdutos('Legumes')">Legumes</button>
+                <button onclick="mostrarProdutos('Comida Rapida')">Comida Rápida</button>
+                <button onclick="mostrarProdutos('Outros')">Outros</button>
+            </div>
+            <hr>
+
+            <div class="produtos-alimentos">
+                <div id="card-produtos">
+
+                </div>
+            </div>
+    </section>
+
+
+    <section class="Banner-temp">
+        <div class="banner">
+            <div class="banner-img">
+                <img src="./img/banner.jpg" alt="">
+                <div class="banner-text">
+                    <div class="text-banner">
+                        <h1>Até 40% de desconto na compra.</h1>
+                    </div>
+                    <div class="sub-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quod nemo placeat sunt enim officia
+                            modi dolor quia repudiandae, adipisci inventore saepe natus atque molestias odio architecto
+                            cupiditate amet asperiores.</p>
+                    </div>
+        
+                    <div class="wrapper-card">
+                        <div class="card-date">
+                            <h1 id="days">30</h1>
+                            <p>dias</p>
+                        </div>
+                        <div class="card-date">
+                            <h1 id="hours">15</h1>
+                            <p>horas</p>
+                        </div>
+                        <div class="card-date">
+                            <h1 id="minutes">55</h1>
+                            <p>minutos</p>
+                        </div>
+                        <div class="card-date">
+                            <h1 id="seconds">60</h1>
+                            <p>segundos</p>
+                        </div>
+                    </div>
+                    <div class="button-buy">
+                        <button>Comprar agora<i class="ri-arrow-right-s-line"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="menu-carrinho">
+        <i class="ri-close-line" id="closeProduct"></i>
+        <div class="card-carrinho">
+            <div class="text-carrinho">
+                <h1>Meu Carrinho</h1>
+            </div>
+            <div class="add-cep">
+                <i class="ri-truck-line"></i>
+                <input id="cepInput" type="number" placeholder="Defina um CEP para calcularmos o frete">
+            </div>
+            <div class="messagem">
+                <p>Desconto já foi aplicado</p>
+            </div>
+            <div class="calc">
+                <button id="Calcular">calcular</button>
+            </div>
+            <div id="carrinhoMenu">
+                <!-- Produtos serão adicionados aqui -->
+            </div>
+            <div class="total">
+                <button id="FinalizarCompra"><a href="#">Finalizar Compra</a></button>
+                <p class="precoTotalProduto">R$ 5879,01</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="text-footer">
+            <h1>Merkate</h1>
+        </div>
+        <div class="menu-footer">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Pages</a></li>
+            </ul>
+        </div>
+        <div class="icones-footer">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+            <a href="#"><i class="ri-whatsapp-fill"></i></a>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="./js/dados.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</body>
+
+</html>

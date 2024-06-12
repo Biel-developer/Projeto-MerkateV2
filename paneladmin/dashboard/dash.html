@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <aside>
+            <div class="navbar">
+                <div class="text-navbar">
+                    <h1>Merkat</h1>
+                </div>
+                <div class="menu-navbar">
+                    <ul>
+                        <li id="Financias"><a href="#">Financias</a></li>
+                        <li id="Produtos"><a href="#">Produtos</a></li>
+                    </ul>
+                </div>
+                <div class="logo-navbar">
+                    <h1>
+                        <>Virtucodex
+                    </h1>
+                </div>
+            </div>
+        </aside>
+
+
+        <main>
+            <header>
+                <h1 id="Usuario"></h1>
+            </header>
+
+            <div class="statistics">
+                <div class="text">
+                    <h1>Produtos</h1>
+                    <button type="button" id="adicionar-produto">Adicionar Produto</button>
+                </div>
+                <div class="menu-card">
+                    <div id="dashboard-produtos"></div>
+                </div>
+            </div>
+        </main>
+
+        <div id="EditPanel">
+            <div class="panel-Edition">
+                <i id="closePanel" class="ri-close-line"></i>
+                <h2 id="titulo-painel">Adicionar Produto</h2>
+                <input type="text" id="nome-produto" placeholder="Nome do Produto">
+                <input type="number" id="preco-produto" placeholder="Preço do Produto">
+                <textarea id="descricao-produto" placeholder="Descrição do Produto"></textarea>
+                <select id="categoria-produto">
+                    <option value="">Selecione a Categoria</option>
+                    <option value="Verduras">Verduras</option>
+                    <option value="Frutas">Frutas</option>
+                    <option value="Carne Fresca">Carne Fresca</option>
+                    <option value="Legumes">Legumes</option>
+                    <option value="Comida Rapida">Comida Rápida</option>
+                    <option value="Outros">Outros</option>
+                </select>
+                <input type="file" id="imagem-produto" accept="image/*">
+                <img id="preview-imagem" style="display:none; max-width:100px;">
+                <button type="button" id="AddProduct">Adicionar Produto</button>
+            </div>
+        </div>
+
+
+
+        <!-- <div id="dashboard-produtos"></div> -->
+
+
+        <script src="./dash.js"></script>
+        <script src="./data.js"></script>
+        <script src="../login.js"></script>
+        <script src="../../js/dados.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>
